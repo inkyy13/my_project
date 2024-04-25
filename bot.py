@@ -23,5 +23,10 @@ async def on_message(message):
         await message.channel.send("\\U0001f642")
     else:
         await message.channel.send(message.content)
-
+def flip_coin():
+    flip = random.randint(0, 2)
+    if flip == 0:
+        return "HEADS"
+    else:
+        return "TAILS"
 client.run(TOKEN)
